@@ -1,6 +1,6 @@
 {
     "name": "rush4u/command-bus",
-    "description": "Simple Command and Query Bus implementation for laravel.",
+    "description": "Simple Command and Query Bus implementation for Laravel.",
     "type": "library",
     "license": "MIT",
     "authors": [
