@@ -25,5 +25,5 @@
                 "Rush4u\\CommandBus\\Vendor\\Laravel\\Rush4uCommandBusServiceProvider"
             ]
         }
-    },
+    }
 }
