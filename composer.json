@@ -1,0 +1,22 @@
+{
+    "name": "rush4u/command-bus",
+    "description": "Simple Command and Query Bus implementation for laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lino Aboy",
+            "email": "linodeveloper85@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "laravel/framework": ">=5.0",
+    },
+    "autoload": {
+        "psr-4": {
+            "Rush4u\\CommandBus\\": "src/"            
+        }
+    },
+    "minimum-stability": "dev",
+}
