@@ -3,6 +3,7 @@
 namespace Rush4u\CommandBus\Vendor\Laravel\Command;
 
 use Illuminate\Contracts\Container\Container;
+use Illuminate\Support\Facades\DB;
 use Rush4u\CommandBus\CommandInterface;
 use Rush4u\CommandBus\Command\CommandBusInterface;
 
@@ -19,6 +20,8 @@ class CommandBus implements CommandBusInterface
     {
         $handler = $this->container->make(get_class($command)."Handler");
 
-        $handler->__invoke($command);
+        DB::transaction(function () use ($handler, $command) {
+            $handler->__invoke($command);
+        });
     }
 }
