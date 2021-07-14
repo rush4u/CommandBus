@@ -11,7 +11,7 @@ Command handlers return void, if you want to return data use a Query Handler, ke
 
 #### Create the Command class
 
-`
+```php
 <?php
 
 namespace App\CommandBus\Cart;
@@ -32,11 +32,11 @@ class RemoveItemFromCartCommand implements CommandInterface
         return $this->id;
     }
 }
-`
+```
 
 #### Create the Command Handler class
 
-`
+```php
 <?php
 
 namespace App\CommandBus\Cart;
@@ -51,11 +51,11 @@ class RemoveItemFromCartCommandHandler implements CommandHandlerInterface
         //proceed with method logic or delegate to service call
     }
 }
-`
+```
 
 #### Invoke command from controller
 
-`
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -83,7 +83,7 @@ class CartController extends Controller
         return redirect('/');
     }
 }
-`
+```
 
 ### Creating Query Commands
 
@@ -91,7 +91,7 @@ A Query Command is a simple php class which receives input, the query handler re
 
 #### Create the Query Command class
 
-`
+```php
 <?php
 
 namespace App\CommandBus\Cart;
@@ -112,11 +112,11 @@ class GetItemFromCartQuery implements CommandInterface
         return $this->id;
     }
 }
-`
+```
 
 #### Create the Query Handler class
 
-`
+```php
 <?php
 
 namespace App\CommandBus\Cart;
@@ -131,11 +131,11 @@ class GetItemFromCartQueryHandler implements QueryHandlerInterface
         //proceed with data gathering, return it in an array
     }
 }
-`
+```
 
 #### Invoke query from controller
 
-`
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -161,4 +161,4 @@ class CartController extends Controller
         return view('cart.find_item_partial, $data);
     }
 }
-`
+```
