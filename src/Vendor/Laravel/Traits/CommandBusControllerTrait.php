@@ -8,9 +8,9 @@ use Rush4u\CommandBus\Query\QueryBusInterface;
 
 trait CommandBusControllerTrait
 {
-    protected function dispatchCommand(CommandInterface $command, $transactional = true)
+    protected function dispatchCommand(CommandInterface $command)
     {
-        app(CommandBusInterface::class)->dispatch($command, $transactional);
+        app(CommandBusInterface::class)->dispatch($command);
     }
 
     protected function dispatchQuery(CommandInterface $command):array
