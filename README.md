@@ -158,7 +158,7 @@ class CartController extends Controller
     {
         $data = $this->queryBus->dispatch(new GetItemFromCartCommand($id));
         
-        return view('cart.find_item_partial, $data);
+        return view('cart.find_item_partial', $data);
     }
 }
 ```
