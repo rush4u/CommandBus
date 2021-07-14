@@ -35,6 +35,5 @@ class Rush4uCommandBusServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
     }
 }
